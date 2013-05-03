@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: 
 
-Sitemap: http://lykathia.github.io/sitemap.xml 
+Sitemap: http://exitiumonline.com/sitemap.xml 
