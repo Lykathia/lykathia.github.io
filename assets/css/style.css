@@ -1,4 +1,4 @@
-.wrap {
+.wrapper {
   min-height: 100%;
   height: auto !important;
   height: 100%;
@@ -10,7 +10,6 @@
   height: 60px;
 }
 
-/* Lastly, apply responsive CSS fixes as necessary */
 @media (max-width: 767px) {
   .footer {
     margin-left: -20px;
