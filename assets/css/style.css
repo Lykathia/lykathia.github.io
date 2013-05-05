@@ -1,13 +1,16 @@
+html,
+body {
+    height: 100%;
+}
+
 .wrapper {
   min-height: 100%;
-  height: auto !important;
-  height: 100%;
-  margin: 0 auto -60px;
+  margin: 0 auto -30px;
 }
 
 .push,
-.footer {
-  height: 60px;
+footer {
+  height: 30px;
 }
 
 @media (max-width: 767px) {
