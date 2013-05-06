@@ -4,7 +4,7 @@
   <title><![CDATA[Exitium - ...]]></title>
   <link href="http://exitiumonline.com/atom.xml" rel="self"/>
   <link href="http://exitiumonline.com/"/>
-  <updated>2013-05-05T01:11:37-03:00</updated>
+  <updated>2013-05-05T23:05:27-03:00</updated>
   <id>http://exitiumonline.com/</id>
   <author>
     <name><![CDATA[Evan Lowry]]></name>
@@ -12,5 +12,14 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[test post please ignore]]></title>
+    <link href="http://exitiumonline.com/blog/2013/05/05/test-post-please-ignore/"/>
+    <updated>2013-05-05T14:35:00-03:00</updated>
+    <id>http://exitiumonline.com/blog/2013/05/05/test-post-please-ignore</id>
+    <content type="html"><![CDATA[
+]]></content>
+  </entry>
   
 </feed>

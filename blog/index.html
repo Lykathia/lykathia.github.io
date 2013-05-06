@@ -6,7 +6,8 @@
   <meta name="author" content="Evan Lowry">
 
   
-  <meta name="description" content=" Blog Archives Recent Posts ">
+  <meta name="description" content="
+">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -26,27 +27,19 @@
 </head>
 
 <body>
-<div class="wrapper container-fluid">
-  <header role="banner" class="row-fluid">
-    <hgroup>
-  <h1><a href="/">Exitium - ...</a></h1>
-  
-    <h2>Decide what this is later ...</h2>
-  
-</hgroup>
-
-  </header>
-
+  <div class="wrapper container-fluid">
   <div class="row-fluid">
-    <nav role="navigation" class="span2">
-      <ul class="main-navigation">
-  <li><a href="/blog/">Blog</a></li>
-  <li><a href="/blog/archives">Archives</a></li>
-</ul>
+    <nav role="navigation">
+      <div class="nav span4 offset8">
+  <a href="/">about</a>
+  <a href="/projects">projects</a>
+  <a href="/blog">thoughts</a>
+</div>
 
     </nav>
-    
-    <div class="span10">
+  </div>
+  <div class="row-fluid">  
+    <div class="span8 offset1">
       <ul class="breadcrumb">
         <li><a href="#">Home</a> <span class="divider">/</span></li>
       </ul>
@@ -54,21 +47,51 @@
         <div class="blog-index">
   
   
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/05/05/test-post-please-ignore/">Test Post Please Ignore</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-05-05T14:35:00-03:00" pubdate data-updated="true">May 5<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content">
+</div>
+  
+  
+
+
+    </article>
+  
   <div class="pagination pagination-small">
     
-    <a href="/blog/archives">Blog Archives</a>
+    <a href="/blog/archive">Blog Archives</a>
     
   </div>
 </div>
 <aside class="sidebar">
   
-    <section>
-  <h1>Recent Posts</h1>
-  <ul id="recent_posts">
-    
-  </ul>
-</section>
-
+    Included file &#8216;asides/recent_posts.html&#8217; not found in _includes directory
 
 
 
@@ -78,7 +101,29 @@
 
       </div>
     </div>
-  </div> <!-- /row-fluid -->
+
+    <nav role="navigation" class="span2">
+      <address class="social-navigation">
+  <a href=""><img src="/assets/img/github.png" alt="Follow my work on GitHub"></a>
+  <a href=""><img src="/assets/img/twitter.png" alt="I have a twitter"></a>
+  <a href=""><img src="/assets/img/linkedin.png" alt="Stalk me on LinkedIn"></a>
+  <a href=""><img src="/assets/img/rss.png" alt="My thoughts in a syndicated format"></a>
+</address>
+
+<section>
+<h5>Recent Articles</h5>
+<dl>
+
+  <dt>05 May</dt>
+  <dd><a href="/blog/2013/05/05/test-post-please-ignore/">test post please ignore</a></dd>
+
+  <dt>&nbsp;</dt>
+  <dd><a href="/blog/archive">All Posts &raquo;</a></dd>
+</dl>
+</section>
+
+    </nav>
+  </div> <!-- /row-fluid -->  
   <div class="push"></div>
 </div>
 
@@ -97,6 +142,14 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
 <!-- <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script> -->
 <script src="/assets/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() {
+      $(".nav a").each(function() {
+          if ($(this).attr('href') === window.location.pathname)
+              $(this).addClass("selected");
+      });
+  });
+</script>
 
 </body>
 </html>
