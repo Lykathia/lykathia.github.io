@@ -30,10 +30,23 @@ May 05 2013 posted in testing Tweet Included file 'asides/recent_posts.html' not
   <div class="wrapper container-fluid">
   <div class="row-fluid">
     <nav role="navigation">
-      <div class="nav span4 offset8">
-  <a href="/">about</a>
-  <a href="/projects">projects</a>
-  <a href="/blog">thoughts</a>
+      <div class="span3 offset8">
+  <div class="row-fluid">
+    <div class="nav-links span12 text-right">
+      <a href="/">about</a>
+      <a href="/projects">projects</a>
+      <a href="/blog">thoughts</a>
+    </div>
+  </div>
+  <div class="row-fluid">
+    <div class="span12 text-right nav-imgs">
+      <a href="https://twitter.com/Lykathia"><img src="/assets/img/twitter.png" alt="Twitter @Lykathia"></a>
+      <a href="https://github.com/Lykathia"><img src="/assets/img/github.png" alt="Follow me on GitHub"></a>
+      <a href="http://www.linkedin.com/pub/evan-lowry/4a/1a6/3a7"><img src="/assets/img/linkedin.png" alt="Stalk me at LinkedIn"></a>
+      <a href="mailto:lowry.e@gmail.com"><img src="/assets/img/email.png" alt="Spam goes here"></a>
+      <a href="#todo"><img src="/assets/img/rss.png" alt="Things I have to say, syndicated"></a>
+    </div>
+  </div>
 </div>
 
     </nav>
@@ -146,7 +159,7 @@ May 05 2013 posted in testing Tweet Included file 'asides/recent_posts.html' not
 <script src="/assets/js/bootstrap.min.js"></script>
 <script type="text/javascript">
   $(document).ready(function() {
-      $(".nav a").each(function() {
+      $(".nav-links a").each(function() {
           if ($(this).attr('href') === window.location.pathname)
               $(this).addClass("selected");
       });

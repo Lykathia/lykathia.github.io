@@ -23,16 +23,25 @@ footer {
   height: 30px;
 }
 
-.nav {
- margin: 15px 0;
+.nav-links {
+ margin-top: 15px;
 }
-.nav > a {
-  margin: 0 15px;
+.nav-links > a {
+  margin: 0 12px;
   color: #999;
 }
 
-.nav > a.selected {
+.nav-links > a.selected {
   color: #08c;
+}
+
+.nav-imgs {
+  padding: 0 10px;
+  margin-top: -10px;
+}
+
+.nav-imgs > a {
+  margin: 0 2px;
 }
 
 .avatar img {
@@ -43,14 +52,14 @@ footer {
   font-size: 10px;
 }
 .recent {
-  margin-top: 40px;
+  margin-top: 4%;
 }
 .recent .row-fluid {
   border-top: 1px solid #999;
 }
 
 .main {
-  margin-top: 50px;
+  margin-top: 6%;
 }
 
 @media (max-width: 767px) {
