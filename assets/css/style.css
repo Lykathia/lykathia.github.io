@@ -39,9 +39,14 @@ footer {
   border: 4px solid #fff;
   box-shadow: 0 2px 4px #ccc;
 }
-
+.recent-side {
+  font-size: 10px;
+}
 .recent {
   margin-top: 40px;
+}
+.recent .row-fluid {
+  border-top: 1px solid #999;
 }
 
 .main {

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Exitium - ...]]></title>
-  <link href="http://exitiumonline.com/atom.xml" rel="self"/>
+  <title><![CDATA[Category: testing | Exitium - ...]]></title>
+  <link href="http://exitiumonline.com/blog/categories/testing/atom.xml" rel="self"/>
   <link href="http://exitiumonline.com/"/>
   <updated>2013-05-06T11:59:12-03:00</updated>
   <id>http://exitiumonline.com/</id>
@@ -18,7 +18,7 @@
     <link href="http://exitiumonline.com/blog/2013/05/05/test-post-please-ignore/"/>
     <updated>2013-05-05T14:35:00-03:00</updated>
     <id>http://exitiumonline.com/blog/2013/05/05/test-post-please-ignore</id>
-    <content type="html"><![CDATA[<p>Example text &#8230;</p>
+    <content type="html"><![CDATA[<p>Example text ...</p>
 ]]></content>
   </entry>
   

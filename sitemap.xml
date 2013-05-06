@@ -2,19 +2,23 @@
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
         <loc>http://exitiumonline.com/blog/2013/05/05/test-post-please-ignore/</loc>
-        <lastmod>2013-05-06T02:10:06-03:00</lastmod>
+        <lastmod>2013-05-06T11:45:22-03:00</lastmod>
     </url>
     <url>
         <loc>http://exitiumonline.com/blog/archive/</loc>
-        <lastmod>2013-05-06T02:13:50-03:00</lastmod>
+        <lastmod>2013-05-06T11:45:22-03:00</lastmod>
     </url>
     <url>
         <loc>http://exitiumonline.com/blog/</loc>
-        <lastmod>2013-05-06T02:12:57-03:00</lastmod>
+        <lastmod>2013-05-06T11:45:22-03:00</lastmod>
+    </url>
+    <url>
+        <loc>http://exitiumonline.com/projects/</loc>
+        <lastmod>2013-05-06T11:58:04-03:00</lastmod>
     </url>
     <url>
         <loc>http://exitiumonline.com/</loc>
-        <lastmod>2013-05-05T23:03:36-03:00</lastmod>
+        <lastmod>2013-05-06T02:47:45-03:00</lastmod>
     </url>
     <url>
         <loc>http://exitiumonline.com/robots.txt</loc>
