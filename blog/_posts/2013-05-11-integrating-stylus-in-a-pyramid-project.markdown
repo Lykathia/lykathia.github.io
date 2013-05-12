@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "Integrating Stylus in a Pyramid Project"
-comments: true
-categories: python, css
+category: coding
+tags: [python, css]
 ---
 
 why stylus

@@ -5,7 +5,7 @@
         {{ page.date | date: "%d<br>%b" }}
       </div>
       <h3 class="post-title">{{ page.title }}</h3>
-      <p class="post-attr">by {{ site.author }} | Tags ...</p>
+      <p class="post-attr muted">by {{ site.author }} | {% for tag in page.tags %}{{ tag }} {% endfor %}</p>
     </header>
     <section class="post-body">
       {{ content }}
