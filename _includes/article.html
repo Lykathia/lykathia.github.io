@@ -2,7 +2,7 @@
   <article role="article">
     <header class="post-header">
       <div class="post-date muted">
-        {{ page.date | date: "%d<br>%b" }}
+        {{ page.date | date: "%b %d<br>%Y" }}
       </div>
       <h3 class="post-title">{{ page.title }}</h3>
       <p class="post-attr muted">by {{ site.author }} | {% for tag in page.tags %}{{ tag }} {% endfor %}</p>
