@@ -1,0 +1,19 @@
+<div class="container-fluid">
+  <article role="article">
+    <header class="post-header">
+      <div class="post-date muted">
+        {{ page.date | date: "%d<br>%b" }}
+      </div>
+      <h3 class="post-title">{{ page.title }}</h3>
+      <p class="post-attr">by {{ site.author }} | Tags ...</p>
+    </header>
+    <section class="post-body">
+      {{ content }}
+    </section>
+    <footer class="post-footer">
+      {% include post/sharing.html %}
+    </footer>
+  </article>
+
+  Comments ...
+</div>

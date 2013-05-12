@@ -1,4 +1,5 @@
+---
+layout: nil
+---
 User-agent: *
 Disallow: 
-
-Sitemap: http://exitiumonline.com/sitemap.xml 

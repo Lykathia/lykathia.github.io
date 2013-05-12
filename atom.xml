@@ -1,25 +1,27 @@
+---
+layout: nil
+---
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Exitium - ...]]></title>
-  <link href="http://exitiumonline.com/atom.xml" rel="self"/>
-  <link href="http://exitiumonline.com/"/>
-  <updated>2013-05-06T20:16:58-03:00</updated>
-  <id>http://exitiumonline.com/</id>
+  <title><![CDATA[{{ site.title }}]]></title>
+  <link href="{{ site.url }}/atom.xml" rel="self"/>
+  <link href="{{ site.url }}/"/>
+  <updated>{{ site.time | date_to_xmlschema }}</updated>
+  <id>{{ site.url }}/</id>
   <author>
-    <name><![CDATA[Evan Lowry]]></name>
-    
+    <name><![CDATA[{{ site.author | strip_html }}]]></name>
+    {% if site.email %}<email><![CDATA[{{ site.email }}]]></email>{% endif %}
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
-  
+  {% for post in site.posts limit: 20 %}
   <entry>
-    <title type="html"><![CDATA[test post please ignore]]></title>
-    <link href="http://exitiumonline.com/blog/2013/05/05/test-post-please-ignore/"/>
-    <updated>2013-05-05T14:35:00-03:00</updated>
-    <id>http://exitiumonline.com/blog/2013/05/05/test-post-please-ignore</id>
-    <content type="html"><![CDATA[<p>Example text &#8230;</p>
-]]></content>
+    <title type="html"><![CDATA[{{ post.title | cdata_escape }}]]></title>
+    <link href="{{ site.url }}{{ post.url }}"/>
+    <updated>{{ post.date | date_to_xmlschema }}</updated>
+    <id>{{ site.url }}{{ post.id }}</id>
+    <content type="html"><![CDATA[{{ post.content | expand_urls: site.url | cdata_escape }}]]></content>
   </entry>
-  
+  {% endfor %}
 </feed>

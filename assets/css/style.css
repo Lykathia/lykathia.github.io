@@ -13,6 +13,17 @@ body {
   font-size: 12px;
 }
 
+.post-header {
+  position: relative;
+}
+.post-date {
+  position: absolute;
+  left: -35px;
+  text-align: center;
+  padding-right: 5px;
+  border-right: 1px solid #ccc;
+}
+
 .wrapper {
   min-height: 100%;
   margin: 0 auto -30px;
