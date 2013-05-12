@@ -3,9 +3,15 @@
 <script src="/assets/js/bootstrap.min.js"></script>
 <script type="text/javascript">
   $(document).ready(function() {
-      $(".nav-links a").each(function() {
-          if ($(this).attr('href') === window.location.pathname)
-              $(this).addClass("selected");
+      var path = window.location.pathname;
+
+      $('.nav-links a').each(function() {
+          if ($(this).attr('href') === '/') {
+              if (path === '/')
+                $(this).addClass('selected')
+          }
+          else if (path.indexOf($(this).attr('href')) !== -1)
+              $(this).addClass('selected');
       });
   });
 </script>
