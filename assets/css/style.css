@@ -16,13 +16,16 @@ body {
 .post-header {
   position: relative;
 }
-.post-date {
-  position: absolute;
-  left: -50px;
-  width: 40px;
-  text-align: center;
-  padding-right: 5px;
-  border-right: 1px solid #ccc;
+@media (min-width: 1200px) {
+    .post-date {
+      position: absolute;
+      top: 0px;
+      left: -50px;
+      width: 40px;
+      text-align: center;
+      padding-right: 5px;
+      border-right: 1px solid #ccc;
+    }
 }
 .post-attr {
   margin-top: -10px;
@@ -70,6 +73,21 @@ footer {
 .recent-side {
   font-size: 10px;
 }
+.recent-side h5 {
+  margin: 0 0 -5% 20%;
+}
+.recent-side dl {
+}
+.recent-side dt {
+  float: left;
+  width: 15%;
+  text-align: right;
+}
+.recent-side dd {
+  margin-left: 20%;
+}
+
+
 .recent {
   margin-top: 4%;
 }
