@@ -11,7 +11,7 @@ permalink: /blog/:categories/:title
 code_dir: downloads/code
 category_dir: blog/categories
 markdown: rdiscount
-pygments: false
+pygments: true
 
 paginate: 10          # Posts per page on the blog index
 pagination_dir: blog  # Directory base for pagination URLs eg. /blog/page/2/
