@@ -4,19 +4,33 @@ layout: blog
 
 <div class="blog-index">
   {% assign index = true %}
+
   {% for post in paginator.posts %}
-  {% assign content = post.content %}
+    {% assign content = post.content %}
     <article>
-      {% include article.html %}
+      <h1 class="post-title">{{post.title}}</h1>
+      <div class="row-fluid">
+        <p class="muted text-left">
+        {{ post.date | date: "%b %d %Y" }},
+        by {{ site.author }} | {% for tag in post.tags %}{{ tag }} {% endfor %}
+        </p>
+      </div>
+      {{ post.content | truncatewords:275 }}
+
+      <br><br><a href="{{post.url}}">Read More</a>
+      <hr>
     </article>
   {% endfor %}
-  <div class="pagination pagination-small">
+
+  <div class="pagination pagination-small text-center">
     {% if paginator.next_page %}
       <a class="prev" href="{{paginator.next_page}}">&larr; Older</a>
     {% endif %}
+
     <a href="/blog/archive">Blog Archives</a>
+
     {% if paginator.previous_page %}
-    <a class="next" href="{{paginator.previous_page}}">Newer &rarr;</a>
+      <a class="next" href="{{paginator.previous_page}}">Newer &rarr;</a>
     {% endif %}
   </div>
 </div>
