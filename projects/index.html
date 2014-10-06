@@ -2,4 +2,28 @@
 layout: project
 ---
 
-wip
+<h2>Some projects I work on ...</h2>
+
+<p class='small italic'>Note: this is just a listing from my github page.
+Will update this to be more representative at a later date.</p>
+
+<hr>
+
+<div id='projects row'>
+  <ul class='repos thumbnails'>
+
+  </ul>
+</div>
+
+<script type="text/javascript">
+  var github_repos = "https://api.github.com/users/Lykathia/repos";
+
+  $.getJSON(github_repos, function(data) {
+    var items = [];
+    $.each(data, function(i, blob) {
+      items.push("<li class='repo span3'><a class='thumbnail' href='" + blob.html_url + "'</a><h4>" + blob.name + "</h4><p>" + blob.description + "</p></li>");
+    });
+
+    $(items.join("")).appendTo($(".repos"));
+  });
+</script>
