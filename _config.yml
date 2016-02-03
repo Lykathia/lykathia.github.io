@@ -10,8 +10,8 @@ root: /
 permalink: /blog/:categories/:title
 code_dir: downloads/code
 category_dir: blog/categories
-markdown: rdiscount
-highlighter: "pygments"
+markdown: kramdown
+highlighter: "rouge"
 
 paginate: 10          # Posts per page on the blog index
 paginate_path: "blog/page:num"
