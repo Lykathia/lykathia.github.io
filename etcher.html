@@ -1,0 +1,99 @@
+<html ng-app='sup'>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <title>Brew Pot Etching Calculator</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+</head>
+<body ng-controller='calcCtrl' class='container'>
+
+  <div class='row'>
+    <div class="col-xs-12">
+      <h1>Pot Specifications</h1>
+
+      <div>
+        <label for='diameter'>Diameter of pot:</label>
+        <input type='number' name='diameter' id='diameter' ng-model='diameter'>
+      </div>
+
+      <div>
+        <label for='maxl'>Max litres to measure:</label>
+        <input type='number' name='maxl' id='maxl' ng-model='maxl'>
+      </div>
+    </div>
+  </div>
+
+  <div class='row'>
+    <div class="col-xs-6">
+      Liters per cm: {{ litres | number: 2 }}
+    </div>
+
+    <div class="col-xs-6">
+      Gallons per cm: {{ gallons | number: 2}}
+    </div>
+  </div>
+
+  <br>
+
+  <hr>
+
+  <div class='row'>
+    <div class="col-xs-12">
+      <h2>Template</h2>
+      <div class="text-center">
+        <svg width="400px" ng-attr-height="{{ totalHeight() }}">
+          <g ng-attr-transform="translate(0, {{totalHeight()}})">
+          <g transform="scale(1,-1)">
+
+          <line x1="199" y1="0" x2="200" ng-attr-y2="{{ getHeight(maxl) * maxl }}"
+            style="stroke:rgb(0,0,0);stroke-width:4">
+          </line>
+
+          <line ng-repeat="i in range(0, maxl)"
+              x1="150" x2="200" ng-attr-y1="{{ getHeight(i) * litres }}" ng-attr-y2="{{ getHeight(i) * litres}}"
+              style="stroke:rgb(0,0,0);stroke-width:3">
+          </line>
+
+          <line ng-repeat="i in range(0, (maxl / 3.8))"
+              x1="199" x2="250" ng-attr-y1="{{ getHeight(i) * gallons }}" ng-attr-y2="{{ getHeight(i) * gallons}}"
+              style="stroke:rgb(0,0,0);stroke-width:3">
+          </line>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+  <script type="text/javascript" charset="utf-8">
+    var app = angular.module('sup', []);
+    app.controller('calcCtrl', ['$scope', function($scope) {
+      var scaleH = 20;
+
+      // Defaults
+      $scope.diameter = 35;
+      $scope.maxl = 32;
+
+      $scope.$watch('diameter', function(v, vo) {
+        var d = $scope.diameter | 1;
+        var r2 = (d / 2) * (d / 2);
+        $scope.litres = 1000 / (r2 * Math.PI);
+        $scope.gallons = 3785.41 / (r2 * Math.PI);
+      });
+
+      $scope.range = function(min, max) {
+        var ret = [];
+        for (var i=min; i <= max; ++i) ret.push(i);
+        return ret;
+      };
+
+      $scope.totalHeight = function() {
+        return $scope.maxl * $scope.litres * scaleH;
+      }
+
+      $scope.getHeight = function(h) {
+        return h * scaleH;
+      };
+
+    }]);
+  </script>
+</body>
+</html>
