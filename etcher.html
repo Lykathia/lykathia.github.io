@@ -3,6 +3,19 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
   <title>Brew Pot Etching Calculator</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <style media="print">
+    @page {
+      margin: 0;
+    }
+
+    body > * { display: none;}
+    h1, h2, h3 { display: none; }
+
+    .print {
+      display: block; !important;
+    }
+
+  </style>
 </head>
 <body ng-controller='calcCtrl' class='container'>
 
@@ -36,15 +49,15 @@
 
   <hr>
 
-  <div class='row'>
+  <div class='row print'>
     <div class="col-xs-12">
       <h2>Template</h2>
       <div class="text-center">
-        <svg width="400px" ng-attr-height="{{ totalHeight() }}">
+        <svg ng-attr-viewBox="0 0 400 {{ totalHeight() }}" height="{{totalHeight()}}">
           <g ng-attr-transform="translate(0, {{totalHeight()}})">
           <g transform="scale(1,-1)">
 
-          <line x1="199" y1="0" x2="200" ng-attr-y2="{{ getHeight(maxl) * maxl }}"
+          <line x1="199" y1="0" x2="200" ng-attr-y2="{{ getHeight(maxl) * litres }}"
             style="stroke:rgb(0,0,0);stroke-width:4">
           </line>
 
@@ -52,11 +65,24 @@
               x1="150" x2="200" ng-attr-y1="{{ getHeight(i) * litres }}" ng-attr-y2="{{ getHeight(i) * litres}}"
               style="stroke:rgb(0,0,0);stroke-width:3">
           </line>
+          <text ng-repeat="i in range(0, maxl)" x="130" ng-attr-y="{{ getHeight(i) * litres }}" ng-attr-transform="translate(0, {{ getHeight(i) * litres }}) scale(1, -1) translate(0, -{{ getHeight(i) * litres }})">
+            {{ i }}
+          </text>
 
           <line ng-repeat="i in range(0, (maxl / 3.8))"
               x1="199" x2="250" ng-attr-y1="{{ getHeight(i) * gallons }}" ng-attr-y2="{{ getHeight(i) * gallons}}"
               style="stroke:rgb(0,0,0);stroke-width:3">
           </line>
+          <text ng-repeat="i in range(0, maxl / 3.8)" x="260" ng-attr-y="{{ getHeight(i) * gallons }}" ng-attr-transform="translate(0, {{ getHeight(i) * gallons }}) scale(1, -1) translate(0, -{{ getHeight(i) * gallons }})">
+            {{ i }}
+          </text>
+
+          <line x1="5" y1="25" ng-attr-x2="{{getHeight(1) + 5}}" y2="25"
+            style="stroke:rgb(0,0,0);stroke-width:2">
+          </line>
+          <text x="0" y="25" transform="translate(0, 15) scale(1, -1) translate(0, -15)">
+            1 cm
+          </text>
         </svg>
       </div>
     </div>
@@ -86,7 +112,7 @@
       };
 
       $scope.totalHeight = function() {
-        return $scope.maxl * $scope.litres * scaleH;
+        return $scope.maxl * $scope.litres * scaleH + 20;
       }
 
       $scope.getHeight = function(h) {
