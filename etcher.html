@@ -53,34 +53,29 @@
     <div class="col-xs-12">
       <h2>Template</h2>
       <div class="text-center">
-        <svg ng-attr-viewBox="0 0 400 {{ totalHeight() }}" height="{{totalHeight()}}">
-          <g ng-attr-transform="translate(0, {{totalHeight()}})">
+        <svg ng-attr-viewBox="0 0 6cm {{ totalHeight() }}cm" height="{{totalHeight()}}cm">
+          <g ng-attr-transform="translate(0, {{totalHeight() * 35.43307}})">
           <g transform="scale(1,-1)">
 
-          <line x1="199" y1="0" x2="200" ng-attr-y2="{{ getHeight(maxl) * litres }}"
-            style="stroke:rgb(0,0,0);stroke-width:4">
+          <line x1="3cm" y1="0cm" x2="3cm" ng-attr-y2="{{ getHeight(maxl) * litres }}cm"
+            style="stroke:rgb(0,0,0);stroke-width:.2cm">
           </line>
 
           <line ng-repeat="i in range(0, maxl)"
-              x1="150" x2="200" ng-attr-y1="{{ getHeight(i) * litres }}" ng-attr-y2="{{ getHeight(i) * litres}}"
-              style="stroke:rgb(0,0,0);stroke-width:3">
+              x1="3cm" x2="1.5cm" ng-attr-y1="{{ getHeight(i) * litres }}cm" ng-attr-y2="{{ getHeight(i) * litres}}cm"
+              style="stroke:rgb(0,0,0);stroke-width:.1cm">
           </line>
-          <text ng-repeat="i in range(0, maxl)" x="130" ng-attr-y="{{ getHeight(i) * litres }}" ng-attr-transform="translate(0, {{ getHeight(i) * litres }}) scale(1, -1) translate(0, -{{ getHeight(i) * litres }})">
-            {{ i }}
           </text>
 
           <line ng-repeat="i in range(0, (maxl / 3.8))"
-              x1="199" x2="250" ng-attr-y1="{{ getHeight(i) * gallons }}" ng-attr-y2="{{ getHeight(i) * gallons}}"
-              style="stroke:rgb(0,0,0);stroke-width:3">
+              x1="3cm" x2="4.5cm" ng-attr-y1="{{ getHeight(i) * gallons }}cm" ng-attr-y2="{{ getHeight(i) * gallons}}cm"
+              style="stroke:rgb(0,0,0);stroke-width:.1cm">
           </line>
-          <text ng-repeat="i in range(0, maxl / 3.8)" x="260" ng-attr-y="{{ getHeight(i) * gallons }}" ng-attr-transform="translate(0, {{ getHeight(i) * gallons }}) scale(1, -1) translate(0, -{{ getHeight(i) * gallons }})">
-            {{ i }}
-          </text>
 
-          <line x1="5" y1="25" ng-attr-x2="{{getHeight(1) + 5}}" y2="25"
-            style="stroke:rgb(0,0,0);stroke-width:2">
+          <line x1="5cm" y1=".5cm" x2="6cm" y2=".5cm"
+            style="stroke:rgb(0,0,0);stroke-width:.1cm">
           </line>
-          <text x="0" y="25" transform="translate(0, 15) scale(1, -1) translate(0, -15)">
+          <text x="5cm" y="0cm" transform="translate(0, 15) scale(1, -1) translate(0, -15)">
             1 cm
           </text>
         </svg>
@@ -92,7 +87,7 @@
   <script type="text/javascript" charset="utf-8">
     var app = angular.module('sup', []);
     app.controller('calcCtrl', ['$scope', function($scope) {
-      var scaleH = 20;
+      var scaleH = 1;
 
       // Defaults
       $scope.diameter = 35;
@@ -112,7 +107,7 @@
       };
 
       $scope.totalHeight = function() {
-        return $scope.maxl * $scope.litres * scaleH + 20;
+        return $scope.maxl * $scope.litres * scaleH + 3;
       }
 
       $scope.getHeight = function(h) {
