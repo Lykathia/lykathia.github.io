@@ -1,28 +1,24 @@
-<div class="container-fluid">
-  <article role="article">
-    <header class="post-header">
-      <h3 class="post-title">{{ page.title }}</h3>
-      <p class="post-attr muted">by {{ site.author }} | {% for tag in page.tags %}{{ tag }} {% endfor %}</p>
-      <div class="post-date muted">
-        {{ page.date | date: "%b %d %Y" }}
-      </div>
-    </header>
-    <section class="post-body">
-      {{ content }}
-    </section>
-    <footer class="post-footer">
-      {% include post/sharing.html %}
-    </footer>
-  </article>
+<header class="post-header">
+  <h3 class="post-title">{{ page.title }}</h3>
+  <p class="post-attr muted">by {{ site.author }} | {% for tag in page.tags %}{{ tag }} {% endfor %}</p>
+  <div class="post-date muted">
+    {{ page.date | date: "%b %d %Y" }}
+  </div>
+</header>
+<section class="post-body">
+  {{ content }}
+</section>
+<footer class="post-footer">
+  {% include post/sharing.html %}
+</footer>
 
-  <section>
-    <script>
-      var idcomments_acct = '3d1afb5d71f1d60421b91fd313cff3ad';
-      var idcomments_post_id;
-      var idcomments_post_url;
-    </script>
-    <span id="IDCommentsPostTitle" style="display:none"></span>
-    <script type='text/javascript' src='http://www.intensedebate.com/js/genericCommentWrapperV2.js'></script>
-    <noscript>Turn on javascript if you care about comments (and being tracked by third party sites).</noscript>
-  </section>
-</div>
+<aside>
+  <script>
+    var idcomments_acct = '3d1afb5d71f1d60421b91fd313cff3ad';
+    var idcomments_post_id;
+    var idcomments_post_url;
+  </script>
+  <span id="IDCommentsPostTitle" style="display:none"></span>
+  <script type='text/javascript' src='http://www.intensedebate.com/js/genericCommentWrapperV2.js'></script>
+  <noscript>Turn on javascript if you care about comments (and being tracked by third party sites).</noscript>
+</aside>
