@@ -1,11 +1,44 @@
-<section class="recent-side">
-  <h5>Recent Articles</h5>
-  <dl>
-    {% for post in site.posts limit:8 %}
-    <dt class="muted">{{post.date | date: "%d %b"}}</dt>
-    <dd><a href="{{post.url}}">{{post.title}}</a></dd>
-    {% endfor %}
-    <dt>&nbsp;</dt>
-    <dd><a href="/blog/archive">All Posts &raquo;</a></dd>
-  </dl>
-</section>
+<aside>
+  <p>
+    <a href="/">Evan Lowry</a> is a Technical Architect in Halifax, Nova Scotia. Combining music and
+    technology with <a href='https://pitchplay.io'>PitchPlay</a> and <a href='https://swanaudio.com'>Swan Audio</a>
+  </p>
+
+  <nav>
+    <ul>
+      <li>
+        <a href="/about">about</a>
+      </li>
+      <li>
+        <a href="/projects">projects</a>
+      </li>
+      <li>
+        <a href="/thoughts">thoughts</a>
+      </li>
+
+      <ul class='social-links'>
+        <li>
+          <a href="https://twitter.com/Lykathia">
+            <i class='fa fa-twitter'></i>
+          </a>
+        </li>
+        <li>
+          <a href="http://www.linkedin.com/pub/evan-lowry/4a/1a6/3a7">
+            <i class='fa fa-linkedin'></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/Lykathia">
+            <i class='fa fa-github'></i>
+          </a>
+        </li>
+        <li>
+          <a href="mailto:lowry.e@gmail.com">
+            <i class='fa fa-envelope'></i>
+          </a>
+        </li>
+      </ul>
+
+    </ul>
+  </nav>
+</aside>

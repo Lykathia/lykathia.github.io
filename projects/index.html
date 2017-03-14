@@ -1,29 +1,37 @@
 ---
-layout: project
+layout: default
 ---
 
-<h2>Some projects I work on ...</h2>
+<section>
+  <h1>Current</h1>
 
-<p class='small italic'>Note: this is just a listing from my github page.
-Will update this to be more representative at a later date.</p>
-
-<hr>
-
-<div id='projects row'>
-  <ul class='repos thumbnails'>
-
+  <ul class='project-list'>
+    <li>
+      <h2>Swan Audio</h2>
+      <a href='https://swanaudio.com'>https://swanaudio.com</a>
+      <p>
+        This hobby-project combines a whole lot of things I love. Low level programming,
+        signal processing, music, electronics and general geekery.
+      </p>
+    </li>
+    <li>
+      <h2>Brewing</h2>
+      <p>Homebrew is delicious.</p>
+    </li>
+    <li>
+      <h2>D&D</h2>
+      <p>Dungeon Master'in one session at a time.</p>
+    </li>
   </ul>
-</div>
+</section>
 
-<script type="text/javascript">
-  var github_repos = "https://api.github.com/users/Lykathia/repos";
-
-  $.getJSON(github_repos, function(data) {
-    var items = [];
-    $.each(data, function(i, blob) {
-      items.push("<li class='repo span3'><a class='thumbnail' href='" + blob.html_url + "'</a><h4>" + blob.name + "</h4><p>" + blob.description + "</p></li>");
-    });
-
-    $(items.join("")).appendTo($(".repos"));
-  });
-</script>
+<section>
+  <h1>Archived</h1>
+  <ul class='project-list'>
+    <li>
+      <h2>Raytracer</h2>
+      <a href='https://github.com/Lykathia/raytracer'>https://github.com/Lykathia/raytracer</a>
+      <p>A school project, kept as a reminder of how far my coding style has evolved.</p>
+    </li>
+  </ul>
+</section>
