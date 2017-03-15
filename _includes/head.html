@@ -21,7 +21,9 @@
   <link href="/assets/css/style.css" rel="stylesheet" type="text/css">
   <link href="/assets/css/syntax.css" rel="stylesheet" type="text/css">
 
-  <link href="{{ site.subscribe_rss }}" rel="alternate" title="{{site.title}}" type="application/atom+xml">
+  {% feed_meta %}
+
+  {% seo %}
 
   {% include google_analytics.html %}
 </head>

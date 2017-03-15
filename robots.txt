@@ -3,3 +3,4 @@ layout: none
 ---
 User-agent: *
 Disallow: 
+Sitemap: http://exitiumonline.com/sitemap.xml
