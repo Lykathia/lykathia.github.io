@@ -6,16 +6,12 @@ title: Exitium
 author: Evan Lowry
 
 root: /
-#permalink: /blog/:year/:month/:day/:title
-permalink: /blog/:categories/:title
-code_dir: downloads/code
-category_dir: blog/categories
+permalink: /thoughts/:categories/:title
 markdown: kramdown
 highlighter: "rouge"
 
 paginate: 10          # Posts per page on the blog index
 paginate_path: "blog/page:num"
-#pagination_dir: blog  # Directory base for pagination URLs eg. /blog/page/2/
 excerpt_link: "Read on &rarr;"  # "Continue reading" link text at the bottom of excerpted articles
 
 # Sharing Options
