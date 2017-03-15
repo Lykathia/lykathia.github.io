@@ -1,9 +1,9 @@
 <header class="post-header">
-  <h3 class="post-title">{{ page.title }}</h3>
-  <p class="post-attr muted">by {{ site.author }} | {% for tag in page.tags %}{{ tag }} {% endfor %}</p>
-  <div class="post-date muted">
+  <h1 class="post-title">{{ page.title }}</h1>
+  <span class="post-attr">by {{ site.author }} | {% for tag in page.tags %}{{ tag }} {% endfor %}</span>
+  <span class="post-date">
     {{ page.date | date: "%b %d %Y" }}
-  </div>
+  </span>
 </header>
 <section class="post-body">
   {{ content }}
